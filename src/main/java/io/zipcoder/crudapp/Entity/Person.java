@@ -1,4 +1,4 @@
-package io.zipcoder.crudapp;
+package io.zipcoder.crudapp.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,22 +9,10 @@ import javax.persistence.Id;
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+   private Long id;
     private String firstName;
     private String lastName;
 
-    public Person(){}
-
-    public Person(String firstName, String lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    public Person(Long id, String firstName, String lastName){
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-
-    }
 
     public Long getId() {
         return id;
